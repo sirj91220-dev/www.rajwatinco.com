@@ -1,0 +1,1736 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Rajwati & Co. | Legal Counsel</title>
+
+    <meta
+      name="description"
+      content="Rajwati & Co. — A legacy of legal excellence, integrity and trusted counsel."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* =========================================================
+   GLOBAL
+========================================================= */
+
+      :root {
+        --black: #10100e;
+        --black-2: #171714;
+        --black-3: #20201b;
+
+        --cream: #f3eee5;
+        --cream-2: #e9e0d2;
+
+        --gold: #b69254;
+        --gold-light: #d1b276;
+
+        --white: #ffffff;
+        --muted: #a7a39a;
+
+        --border: rgba(255, 255, 255, 0.13);
+
+        --serif: "Cormorant Garamond", Georgia, serif;
+        --sans: "Inter", Arial, sans-serif;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--black);
+        color: var(--cream);
+        font-family: var(--sans);
+        overflow-x: hidden;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      textarea {
+        font-family: inherit;
+      }
+
+      .container {
+        width: min(1180px, 88%);
+        margin: auto;
+      }
+
+      /* =========================================================
+   NAVIGATION
+========================================================= */
+
+      .navbar {
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+
+        padding: 24px 6%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        transition: all 0.4s ease;
+      }
+
+      .navbar.scrolled {
+        background: rgba(16, 16, 14, 0.94);
+        backdrop-filter: blur(16px);
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        border-bottom: 1px solid var(--border);
+      }
+
+      /* Logo */
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        font-family: var(--serif);
+        font-size: 30px;
+        font-weight: 600;
+
+        letter-spacing: 1px;
+      }
+
+      .logo img {
+        width: 52px;
+        height: 52px;
+        object-fit: contain;
+      }
+
+      .logo-text span {
+        color: var(--gold-light);
+      }
+
+      /* Navigation */
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 32px;
+
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .nav-links a {
+        position: relative;
+        padding-bottom: 6px;
+      }
+
+      .nav-links a::after {
+        content: "";
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 0;
+        height: 1px;
+
+        background: var(--gold);
+
+        transition: 0.3s;
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      /* Consultation */
+
+      .nav-consultation {
+        border: 1px solid var(--gold);
+
+        padding: 12px 20px;
+
+        font-size: 10px;
+
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+
+        transition: 0.3s;
+      }
+
+      .nav-consultation:hover {
+        background: var(--gold);
+        color: var(--black);
+      }
+
+      /* Mobile menu */
+
+      .menu-button {
+        display: none;
+
+        color: white;
+        font-size: 26px;
+
+        cursor: pointer;
+      }
+
+      /* =========================================================
+   HERO
+========================================================= */
+
+      .hero {
+        min-height: 100vh;
+
+        position: relative;
+
+        display: flex;
+        align-items: center;
+
+        background:
+          linear-gradient(
+            90deg,
+            rgba(16, 16, 14, 0.98),
+            rgba(16, 16, 14, 0.78),
+            rgba(16, 16, 14, 0.48)
+          ),
+          url(https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=2000&q=85)
+            center / cover;
+      }
+
+      .hero-content {
+        width: min(900px, 88%);
+
+        margin-left: 8%;
+
+        padding-top: 70px;
+      }
+
+      .eyebrow {
+        color: var(--gold-light);
+
+        font-size: 10px;
+
+        letter-spacing: 4px;
+
+        text-transform: uppercase;
+
+        margin-bottom: 24px;
+      }
+
+      .hero h1 {
+        font-family: var(--serif);
+
+        font-weight: 500;
+
+        font-size: clamp(65px, 9vw, 120px);
+
+        line-height: 0.83;
+
+        letter-spacing: -2px;
+      }
+
+      .hero h1 span {
+        color: var(--gold-light);
+      }
+
+      .hero-description {
+        max-width: 560px;
+
+        color: #c0bcb4;
+
+        font-size: 15px;
+
+        line-height: 1.9;
+
+        margin-top: 32px;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 15px;
+
+        margin-top: 35px;
+
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        display: inline-block;
+
+        padding: 15px 25px;
+
+        font-size: 10px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 1.5px;
+
+        transition: 0.3s;
+      }
+
+      .btn-gold {
+        color: var(--black);
+        background: var(--gold);
+      }
+
+      .btn-gold:hover {
+        background: var(--gold-light);
+        transform: translateY(-3px);
+      }
+
+      .btn-outline {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .btn-outline:hover {
+        color: var(--gold-light);
+        border-color: var(--gold);
+      }
+
+      .hero-scroll {
+        position: absolute;
+
+        bottom: 30px;
+        left: 8%;
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
+
+        text-transform: uppercase;
+
+        color: #77746d;
+      }
+
+      /* =========================================================
+   INTRO
+========================================================= */
+
+      .intro {
+        background: var(--cream);
+        color: var(--black);
+
+        padding: 120px 0;
+      }
+
+      .intro-grid {
+        display: grid;
+
+        grid-template-columns: 0.8fr 1.2fr;
+
+        gap: 90px;
+
+        align-items: center;
+      }
+
+      .section-label {
+        color: #957546;
+
+        font-size: 10px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 20px;
+      }
+
+      .intro h2 {
+        font-family: var(--serif);
+
+        font-weight: 500;
+
+        font-size: clamp(50px, 6vw, 78px);
+
+        line-height: 0.9;
+      }
+
+      .intro-text {
+        color: #5f5b54;
+
+        font-size: 16px;
+
+        line-height: 1.9;
+      }
+
+      .intro-text + .intro-text {
+        margin-top: 20px;
+      }
+
+      /* =========================================================
+   LEGACY / FATHER + CLIENT SECTIONS
+========================================================= */
+
+      .people-section {
+        background: var(--black);
+        padding: 130px 0;
+
+        overflow: hidden;
+      }
+
+      .person-row {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 80px;
+
+        align-items: center;
+
+        min-height: 600px;
+
+        padding: 60px 0;
+      }
+
+      /*
+    IMPORTANT:
+
+    Row 1:
+    photo LEFT
+    information RIGHT
+
+    Row 2:
+    information LEFT
+    photo RIGHT
+*/
+
+      .person-row.reverse {
+        background: var(--black-2);
+      }
+
+      /* Photo */
+
+      .person-photo {
+        position: relative;
+
+        height: 580px;
+
+        overflow: hidden;
+
+        background: #222;
+      }
+
+      .person-photo::after {
+        content: "";
+
+        position: absolute;
+
+        inset: 20px;
+
+        border: 1px solid rgba(210, 178, 118, 0.4);
+
+        pointer-events: none;
+      }
+
+      .person-photo img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        filter: grayscale(20%);
+
+        transition:
+          transform 0.8s ease,
+          filter 0.8s ease;
+      }
+
+      .person-row:hover .person-photo img {
+        transform: scale(1.035);
+
+        filter: grayscale(0%);
+      }
+
+      /* Person information */
+
+      .person-info {
+        padding: 40px;
+      }
+
+      .person-number {
+        color: var(--gold);
+
+        font-size: 11px;
+
+        letter-spacing: 3px;
+
+        text-transform: uppercase;
+      }
+
+      .person-info h2 {
+        font-family: var(--serif);
+
+        font-size: clamp(48px, 5vw, 72px);
+
+        line-height: 0.9;
+
+        font-weight: 500;
+
+        margin-top: 20px;
+      }
+
+      .person-role {
+        color: var(--gold-light);
+
+        font-size: 10px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 2px;
+
+        margin-top: 18px;
+      }
+
+      .person-line {
+        width: 70px;
+
+        height: 1px;
+
+        background: var(--gold);
+
+        margin: 30px 0;
+      }
+
+      .person-info p {
+        color: #aaa69e;
+
+        font-size: 15px;
+
+        line-height: 1.95;
+
+        max-width: 550px;
+      }
+
+      /* =========================================================
+   LEGACY QUOTE
+========================================================= */
+
+      .legacy-quote {
+        background: var(--cream);
+
+        color: var(--black);
+
+        text-align: center;
+
+        padding: 120px 8%;
+      }
+
+      .quote-symbol {
+        font-family: var(--serif);
+
+        font-size: 100px;
+
+        color: var(--gold);
+
+        line-height: 0.4;
+      }
+
+      .legacy-quote h2 {
+        font-family: var(--serif);
+
+        font-size: clamp(42px, 5vw, 70px);
+
+        font-weight: 400;
+
+        line-height: 1;
+
+        max-width: 950px;
+
+        margin: 45px auto 25px;
+      }
+
+      .legacy-quote p {
+        color: #83765e;
+
+        font-size: 10px;
+
+        letter-spacing: 3px;
+
+        text-transform: uppercase;
+      }
+
+      /* =========================================================
+   PRACTICE AREAS
+========================================================= */
+
+      .practice {
+        background: var(--black-2);
+
+        padding: 120px 0;
+      }
+
+      .practice-heading {
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: end;
+
+        gap: 50px;
+
+        margin-bottom: 60px;
+      }
+
+      .practice-heading h2 {
+        font-family: var(--serif);
+
+        font-size: clamp(50px, 6vw, 75px);
+
+        font-weight: 500;
+
+        line-height: 0.9;
+      }
+
+      .practice-heading p {
+        max-width: 370px;
+
+        color: var(--muted);
+
+        line-height: 1.8;
+
+        font-size: 14px;
+      }
+
+      .practice-grid {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        border-left: 1px solid var(--border);
+
+        border-top: 1px solid var(--border);
+      }
+
+      .practice-card {
+        min-height: 290px;
+
+        padding: 35px;
+
+        position: relative;
+
+        border-right: 1px solid var(--border);
+
+        border-bottom: 1px solid var(--border);
+
+        transition: 0.4s;
+      }
+
+      .practice-card:hover {
+        background: #1d1d19;
+
+        transform: translateY(-5px);
+      }
+
+      .practice-number {
+        color: var(--gold);
+
+        font-size: 11px;
+
+        letter-spacing: 2px;
+      }
+
+      .practice-card h3 {
+        font-family: var(--serif);
+
+        font-size: 33px;
+
+        font-weight: 500;
+
+        margin-top: 55px;
+      }
+
+      .practice-card p {
+        color: #85827b;
+
+        line-height: 1.7;
+
+        font-size: 13px;
+
+        margin-top: 15px;
+      }
+
+      .practice-arrow {
+        position: absolute;
+
+        right: 28px;
+        bottom: 25px;
+
+        color: var(--gold);
+
+        font-size: 22px;
+      }
+
+      /* =========================================================
+   STATS
+========================================================= */
+
+      .stats {
+        padding: 70px 0;
+
+        background: #121210;
+
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .stats-grid {
+        display: grid;
+
+        grid-template-columns: repeat(4, 1fr);
+
+        text-align: center;
+      }
+
+      .stat {
+        border-right: 1px solid var(--border);
+      }
+
+      .stat:last-child {
+        border-right: 0;
+      }
+
+      .stat strong {
+        font-family: var(--serif);
+
+        color: var(--gold-light);
+
+        font-size: 65px;
+
+        font-weight: 500;
+      }
+
+      .stat span {
+        display: block;
+
+        color: #77746d;
+
+        font-size: 9px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 2px;
+      }
+
+      /* =========================================================
+   CONTACT
+========================================================= */
+
+      .contact {
+        background: var(--cream);
+
+        color: var(--black);
+
+        padding: 120px 0;
+      }
+
+      .contact-grid {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 100px;
+      }
+
+      .contact h2 {
+        font-family: var(--serif);
+
+        font-size: clamp(55px, 6vw, 78px);
+
+        line-height: 0.88;
+
+        font-weight: 500;
+      }
+
+      .contact-description {
+        color: #666159;
+
+        max-width: 470px;
+
+        line-height: 1.8;
+
+        margin-top: 25px;
+      }
+
+      .contact-details {
+        margin-top: 40px;
+      }
+
+      .contact-detail {
+        margin-bottom: 24px;
+      }
+
+      .contact-detail small {
+        display: block;
+
+        color: #997b48;
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+
+        text-transform: uppercase;
+
+        margin-bottom: 7px;
+      }
+
+      .contact-detail span,
+      .contact-detail a {
+        font-size: 15px;
+      }
+
+      /* Contact form */
+
+      .contact-form {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 20px;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+
+        border: 0;
+
+        border-bottom: 1px solid #bbb4a8;
+
+        background: transparent;
+
+        padding: 15px 3px;
+
+        outline: none;
+
+        color: var(--black);
+
+        font-size: 14px;
+      }
+
+      .contact-form textarea {
+        min-height: 140px;
+
+        resize: vertical;
+      }
+
+      .contact-form input:focus,
+      .contact-form textarea:focus {
+        border-color: var(--gold);
+      }
+
+      .contact-form button {
+        border: 0;
+
+        cursor: pointer;
+
+        align-self: flex-start;
+      }
+
+      /* =========================================================
+   FOOTER
+========================================================= */
+
+      footer {
+        background: #0c0c0a;
+
+        padding: 60px 0 25px;
+      }
+
+      .footer-top {
+        display: flex;
+
+        justify-content: space-between;
+
+        gap: 50px;
+
+        padding-bottom: 45px;
+
+        border-bottom: 1px solid var(--border);
+      }
+
+      .footer-logo {
+        font-family: var(--serif);
+
+        font-size: 40px;
+      }
+
+      .footer-logo span {
+        color: var(--gold);
+      }
+
+      .footer-description {
+        max-width: 350px;
+
+        color: #77746d;
+
+        line-height: 1.7;
+
+        font-size: 13px;
+      }
+
+      .footer-bottom {
+        display: flex;
+
+        justify-content: space-between;
+
+        gap: 20px;
+
+        padding-top: 25px;
+
+        color: #5f5c56;
+
+        font-size: 9px;
+
+        letter-spacing: 1.5px;
+
+        text-transform: uppercase;
+      }
+
+      /* =========================================================
+   WHATSAPP
+========================================================= */
+
+      .whatsapp {
+        position: fixed;
+
+        z-index: 999;
+
+        right: 25px;
+        bottom: 25px;
+
+        width: 60px;
+        height: 60px;
+
+        border-radius: 50%;
+
+        background: #25d366;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+
+        transition: 0.3s;
+      }
+
+      .whatsapp:hover {
+        transform: scale(1.1);
+      }
+
+      .whatsapp svg {
+        width: 29px;
+        height: 29px;
+
+        fill: white;
+      }
+
+      /* =========================================================
+   ANIMATIONS
+========================================================= */
+
+      .reveal {
+        opacity: 0;
+
+        transform: translateY(35px);
+
+        transition:
+          opacity 0.8s ease,
+          transform 0.8s ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+
+        transform: translateY(0);
+      }
+
+      /* =========================================================
+   MOBILE
+========================================================= */
+
+      @media (max-width: 950px) {
+        .nav-links,
+        .nav-consultation {
+          display: none;
+        }
+
+        .menu-button {
+          display: block;
+        }
+
+        .nav-links.mobile {
+          position: absolute;
+
+          top: 80px;
+          right: 5%;
+
+          width: 250px;
+
+          display: flex;
+
+          flex-direction: column;
+
+          gap: 25px;
+
+          background: #171714;
+
+          padding: 30px;
+
+          border: 1px solid var(--border);
+        }
+
+        .intro-grid,
+        .contact-grid {
+          grid-template-columns: 1fr;
+
+          gap: 50px;
+        }
+
+        .practice-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .stats-grid {
+          grid-template-columns: 1fr 1fr;
+
+          gap: 40px;
+        }
+
+        .stat {
+          border: 0;
+        }
+
+        .person-row {
+          grid-template-columns: 1fr;
+
+          gap: 25px;
+
+          min-height: auto;
+        }
+
+        /*
+       On tablet/mobile both sections remain
+       visually separated.
+    */
+
+        .person-row.reverse .person-photo {
+          order: 1;
+        }
+
+        .person-row.reverse .person-info {
+          order: 2;
+        }
+
+        .person-photo {
+          height: 520px;
+        }
+
+        .person-info {
+          padding: 30px 0;
+        }
+
+        .practice-heading {
+          display: block;
+        }
+
+        .practice-heading p {
+          margin-top: 25px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          width: 88%;
+        }
+
+        .navbar {
+          padding: 18px 5%;
+        }
+
+        .logo {
+          font-size: 25px;
+        }
+
+        .logo img {
+          width: 43px;
+          height: 43px;
+        }
+
+        .hero {
+          min-height: 850px;
+        }
+
+        .hero-content {
+          margin-left: 6%;
+
+          width: 88%;
+        }
+
+        .hero h1 {
+          font-size: 63px;
+        }
+
+        .intro,
+        .people-section,
+        .practice,
+        .contact {
+          padding: 80px 0;
+        }
+
+        .person-row {
+          padding: 45px 0;
+        }
+
+        .person-photo {
+          height: 420px;
+        }
+
+        .person-photo::after {
+          inset: 12px;
+        }
+
+        .person-info {
+          padding: 25px 0;
+        }
+
+        .person-info h2 {
+          font-size: 52px;
+        }
+
+        .practice-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .stats {
+          padding: 55px 0;
+        }
+
+        .stat strong {
+          font-size: 48px;
+        }
+
+        .legacy-quote {
+          padding: 90px 7%;
+        }
+
+        .contact h2 {
+          font-size: 58px;
+        }
+
+        .footer-top,
+        .footer-bottom {
+          flex-direction: column;
+        }
+
+        .whatsapp {
+          width: 55px;
+          height: 55px;
+
+          right: 18px;
+          bottom: 18px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+    <header class="navbar" id="navbar">
+      <a href="#" class="logo">
+        <!-- CHANGE YOUR LOGO HERE -->
+        <img
+          src="C:\Users\vprat\Downloads\rj.jpg.jpeg"
+          alt="Rajwati & Co. Logo"
+        />
+
+        <div class="logo-text">Rajwati <span>&</span> Co.</div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a href="#about">About</a>
+          </li>
+
+          <li>
+            <a href="#legacy">Legacy</a>
+          </li>
+
+          <li>
+            <a href="#practice">Practice</a>
+          </li>
+
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="nav-consultation"> Consultation </a>
+
+      <div class="menu-button" id="menuButton">☰</div>
+    </header>
+
+    <!-- =====================================================
+     HERO
+===================================================== -->
+
+    <section class="hero">
+      <div class="hero-content reveal">
+        <div class="eyebrow">Rajwati & Co. • Legal Counsel</div>
+
+        <h1>
+          A legacy of
+          <span>trust.</span>
+        </h1>
+
+        <p class="hero-description">
+          Experience, integrity and strategic legal counsel built across
+          generations — protecting what matters and pursuing what is right.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#legacy" class="btn btn-gold"> Discover Our Legacy </a>
+
+          <a href="#contact" class="btn btn-outline"> Contact Us </a>
+        </div>
+      </div>
+
+      <div class="hero-scroll">Scroll to explore ↓</div>
+    </section>
+
+    <!-- =====================================================
+     ABOUT THE FIRM
+===================================================== -->
+
+    <section class="intro" id="about">
+      <div class="container">
+        <div class="intro-grid">
+          <div class="reveal">
+            <div class="section-label">About Rajwati & Co.</div>
+
+            <h2>
+              Law with<br />
+              purpose.
+            </h2>
+          </div>
+
+          <div class="reveal">
+            <p class="intro-text">
+              Rajwati & Co. represents a commitment to thoughtful legal counsel,
+              professional integrity and long-term relationships.
+            </p>
+
+            <p class="intro-text">
+              Our practice combines experience and modern legal strategy to
+              provide clients with clear, practical and effective
+              representation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     LEGACY — FATHER + CLIENT
+===================================================== -->
+
+    <section class="people-section" id="legacy">
+      <div class="container">
+        <!-- =================================================
+             FATHER
+             PHOTO LEFT / INFORMATION RIGHT
+        ================================================= -->
+
+        <div class="person-row">
+          <!-- FATHER PHOTO -->
+
+          <div class="person-photo reveal">
+            <!-- CHANGE FATHER PHOTO HERE -->
+
+            <img
+              src="C:\Users\vprat\Downloads\papa.jpg.jpeg"
+              alt="Photograph of the founder"
+            />
+          </div>
+
+          <!-- FATHER INFORMATION -->
+
+          <div class="person-info reveal">
+            <div class="person-number">01 — The Foundation</div>
+
+            <!-- CHANGE FATHER NAME -->
+
+            <h2>Kamalesh Kumar Mishra<br /></h2>
+
+            <!-- CHANGE FATHER TITLE -->
+
+            <div class="person-role">Founder / Senior Advocate</div>
+
+            <div class="person-line"></div>
+
+            <!-- CHANGE FATHER BIO -->
+
+            <p>
+              This is where you can write the complete story of your father.
+              Explain his legal career, his values, his achievements, his
+              contribution to the legal profession and the principles that
+              shaped Rajwati & Co.
+            </p>
+
+            <br />
+
+            <p>
+              His dedication to justice, professional integrity and service to
+              clients became the foundation upon which the next generation
+              continues to build.
+            </p>
+          </div>
+        </div>
+
+        <!-- =================================================
+             CLIENT
+             INFORMATION LEFT / PHOTO RIGHT
+        ================================================= -->
+
+        <div class="person-row reverse">
+          <!-- CLIENT INFORMATION -->
+
+          <div class="person-info reveal">
+            <div class="person-number">02 — The Next Generation</div>
+
+            <!-- CHANGE CLIENT NAME -->
+
+            <h2>Adv Ashutosh Mishra<br /></h2>
+
+            <!-- CHANGE CLIENT TITLE -->
+
+            <div class="person-role">Advocate / Partner</div>
+
+            <div class="person-line"></div>
+
+            <!-- CHANGE CLIENT BIO -->
+
+            <p>
+              This section is for the current generation of Rajwati & Co.
+              Introduce the client, their professional background, education,
+              areas of practice, achievements and philosophy. Explain how they
+              continue the values and legacy established by their father while
+              bringing their own vision to the practice.
+            </p>
+
+            <br />
+
+            <p>
+              With a forward-looking approach and a commitment to every client,
+              the practice continues to evolve while remaining rooted in the
+              principles on which it was founded.
+            </p>
+          </div>
+
+          <!-- CLIENT PHOTO -->
+
+          <div class="person-photo reveal">
+            <!-- CHANGE CLIENT PHOTO HERE -->
+
+            <img
+              src="C:\Users\vprat\Downloads\son.jpg.jpeg"
+              alt="Photograph of current advocate"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     LEGACY QUOTE
+===================================================== -->
+
+    <section class="legacy-quote">
+      <div class="quote-symbol">“</div>
+
+      <h2 class="reveal">
+        A reputation is built over generations, one client and one matter at a
+        time.
+      </h2>
+
+      <p>The Rajwati & Co. philosophy</p>
+    </section>
+
+    <!-- =====================================================
+     PRACTICE AREAS
+===================================================== -->
+
+    <section class="practice" id="practice">
+      <div class="container">
+        <div class="practice-heading reveal">
+          <div>
+            <div class="eyebrow">Our Expertise</div>
+
+            <h2>
+              Practice<br />
+              Areas
+            </h2>
+          </div>
+
+          <p>
+            Strategic legal advice and representation across matters where
+            experience, precision and trust are essential.
+          </p>
+        </div>
+
+        <div class="practice-grid">
+          <article class="practice-card reveal">
+            <div class="practice-number">01</div>
+
+            <h3>Corporate Law</h3>
+
+            <p>
+              Business structures, transactions, contracts and commercial
+              advisory.
+            </p>
+
+            <div class="practice-arrow">↗</div>
+          </article>
+
+          <article class="practice-card reveal">
+            <div class="practice-number">02</div>
+
+            <h3>Civil Litigation</h3>
+
+            <p>
+              Strategic representation in civil disputes and complex legal
+              matters.
+            </p>
+
+            <div class="practice-arrow">↗</div>
+          </article>
+
+          <article class="practice-card reveal">
+            <div class="practice-number">03</div>
+
+            <h3>Property Law</h3>
+
+            <p>Property transactions, documentation, disputes and advisory.</p>
+
+            <div class="practice-arrow">↗</div>
+          </article>
+
+          <article class="practice-card reveal">
+            <div class="practice-number">04</div>
+
+            <h3>Family Law</h3>
+
+            <p>
+              Sensitive legal guidance for important personal and family
+              matters.
+            </p>
+
+            <div class="practice-arrow">↗</div>
+          </article>
+
+          <article class="practice-card reveal">
+            <div class="practice-number">05</div>
+
+            <h3>Criminal Law</h3>
+
+            <p>
+              Professional representation and strategic advice in criminal
+              proceedings.
+            </p>
+
+            <div class="practice-arrow">↗</div>
+          </article>
+
+          <article class="practice-card reveal">
+            <div class="practice-number">06</div>
+
+            <h3>Legal Advisory</h3>
+
+            <p>
+              Practical legal advice designed around each client's individual
+              circumstances.
+            </p>
+
+            <div class="practice-arrow">↗</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     STATS
+===================================================== -->
+
+    <section class="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat reveal">
+            <strong>25+</strong>
+
+            <span> Years of Experience </span>
+          </div>
+
+          <div class="stat reveal">
+            <strong>500+</strong>
+
+            <span> Matters Handled </span>
+          </div>
+
+          <div class="stat reveal">
+            <strong>100%</strong>
+
+            <span> Commitment </span>
+          </div>
+
+          <div class="stat reveal">
+            <strong>2</strong>
+
+            <span> Generations </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     CONTACT
+===================================================== -->
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- CONTACT INFORMATION -->
+
+          <div class="reveal">
+            <div class="section-label">Begin a Conversation</div>
+
+            <h2>
+              Let's talk<br />
+              about your<br />
+              matter.
+            </h2>
+
+            <p class="contact-description">
+              Contact Rajwati & Co. to discuss your legal requirements and
+              arrange a consultation.
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-detail">
+                <small> Phone </small>
+
+                <!-- CHANGE PHONE -->
+
+                <a href="tel:+919044915410"> +91 9044915410 </a>
+              </div>
+
+              <div class="contact-detail">
+                <small> Email </small>
+
+                <!-- CHANGE EMAIL -->
+
+                <a href="mailto:contact@rajwatiandco.com">
+                  contact@rajwatiandco.com
+                </a>
+              </div>
+
+              <div class="contact-detail">
+                <small> Office </small>
+
+                <!-- CHANGE ADDRESS -->
+
+                <span> New Delhi, India </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTACT FORM -->
+
+          <div class="reveal">
+            <form class="contact-form" id="contactForm">
+              <input type="text" placeholder="Your Name" required />
+
+              <input type="email" placeholder="Email Address" required />
+
+              <input type="tel" placeholder="Phone Number" />
+
+              <textarea
+                placeholder="Tell us about your legal matter..."
+                required
+              ></textarea>
+
+              <button type="submit" class="btn btn-gold">
+                Request Consultation
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     FOOTER
+===================================================== -->
+
+    <footer>
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-logo">Rajwati <span>&</span> Co.</div>
+
+          <p class="footer-description">
+            Legal counsel built on experience, integrity and a commitment to
+            every client.
+          </p>
+        </div>
+
+        <div class="footer-bottom">
+          <span> © 2026 Rajwati & Co. All Rights Reserved. </span>
+
+          <span> Legal Counsel • Trusted Representation </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =====================================================
+     WHATSAPP BUTTON
+===================================================== -->
+
+    <!--
+    IMPORTANT:
+
+    Change 919876543210 below to the client's
+    WhatsApp number.
+
+    Do NOT include + or spaces.
+
+    Example:
+    Indian number +91 98765 43210
+
+    becomes:
+
+    919876543210
+-->
+
+    <a
+      class="whatsapp"
+      href="https://wa.me/919044915410?text=Hello%20Rajwati%20%26%20Co.%2C%20I%20would%20like%20to%20discuss%20a%20legal%20matter."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contact Rajwati & Co. on WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M20.52 3.48A11.78 11.78 0 0012.05 0C5.55 0 .27 5.28.27 11.78c0 2.08.54 4.11 1.57 5.9L.17 24l6.48-1.7a11.77 11.77 0 005.4 1.3h.01c6.5 0 11.77-5.28 11.77-11.78 0-3.14-1.22-6.09-3.31-8.34zM12.06 21.56h-.01a9.78 9.78 0 01-4.99-1.36l-.36-.21-3.85 1.01 1.03-3.75-.23-.39a9.78 9.78 0 01-1.5-5.08c0-5.4 4.4-9.79 9.8-9.79 2.61 0 5.06 1.02 6.9 2.86a9.72 9.72 0 012.87 6.92c-.01 5.4-4.4 9.79-9.81 9.79zm5.37-7.34c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.65.15-.19.29-.75.95-.92 1.14-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.77-1.43-1.72-1.6-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.65-1.58-.89-2.17-.23-.57-.47-.49-.65-.5h-.56c-.19 0-.51.07-.78.36-.27.29-1.02.99-1.02 2.42s1.04 2.81 1.19 3c.15.19 2.05 3.13 4.97 4.39.69.3 1.23.48 1.65.61.69.22 1.32.19 1.81.12.55-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34z"
+        />
+      </svg>
+    </a>
+
+    <script>
+      /* =========================================================
+   NAVBAR SCROLL
+========================================================= */
+
+      const navbar = document.getElementById("navbar");
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      /* =========================================================
+   MOBILE MENU
+========================================================= */
+
+      const menuButton = document.getElementById("menuButton");
+      const navLinks = document.getElementById("navLinks");
+
+      menuButton.addEventListener("click", function () {
+        navLinks.classList.toggle("mobile");
+      });
+
+      document.querySelectorAll(".nav-links a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          navLinks.classList.remove("mobile");
+        });
+      });
+
+      /* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+      const revealElements = document.querySelectorAll(".reveal");
+
+      const revealObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.12,
+        },
+      );
+
+      revealElements.forEach(function (element) {
+        revealObserver.observe(element);
+      });
+
+      /* =========================================================
+   CONTACT FORM
+========================================================= */
+
+      const contactForm = document.getElementById("contactForm");
+
+      contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        alert("Thank you. Your consultation request has been received.");
+
+        contactForm.reset();
+      });
+    </script>
+  </body>
+</html>
